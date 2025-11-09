@@ -664,3 +664,12 @@ footer {
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.announcement-banner {
+  background-color: #1b5e20; /* Darker green for better contrast */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15); /* Improves text readability */
+}
