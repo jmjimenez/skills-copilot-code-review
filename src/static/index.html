@@ -12,14 +12,16 @@
     />
   </head>
   <body>
-    <div class="announcement-banner">
-      📢 Activity registration is open until the end of the month. Don't lose your spot!
-    </div>
+    <div id="announcements-container"></div>
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
       <div id="user-controls">
         <div id="user-status">
+          <button id="announcements-button" class="icon-button">
+            <span class="announcement-icon">📣</span>
+            <span>Announcements</span>
+          </button>
           <button id="login-button" class="icon-button">
             <span class="user-icon">👤</span>
             <span>Login</span>
@@ -138,6 +140,41 @@
     </div>
 
     <script src="app.js"></script>
+
+    <!-- Announcements Modal -->
+    <div id="announcements-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-announcements-modal">&times;</span>
+        <h3>Announcements</h3>
+        <div id="announcements-list">
+          <!-- announcements will be loaded here -->
+        </div>
+
+        <div id="announcement-form-container" class="hidden">
+          <hr />
+          <h4 id="announcement-form-title">New Announcement</h4>
+          <form id="announcement-form">
+            <div class="form-group">
+              <label for="ann-message">Message</label>
+              <textarea id="ann-message" required rows="3" placeholder="Write your announcement message"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="ann-start">Start Date (optional)</label>
+              <input type="date" id="ann-start" />
+            </div>
+            <div class="form-group">
+              <label for="ann-exp">Expiration Date</label>
+              <input type="date" id="ann-exp" required />
+            </div>
+            <input type="hidden" id="ann-id" />
+            <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:10px;">
+              <button type="button" id="ann-cancel" class="cancel-btn">Cancel</button>
+              <button type="submit" id="ann-save" class="confirm-btn">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   <div class="announcement-banner">
     📢 Activity registration is open until the end of the month. Don't lose your spot!
   </div>

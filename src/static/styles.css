@@ -673,3 +673,54 @@ footer {
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(0,0,0,0.15); /* Improves text readability */
 }
+
+/* Announcements modal list */
+.announcement-item {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.announcement-text {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.announcement-meta {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.announcement-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.announcement-controls button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.announcement-controls button:hover { opacity: 0.95; }
+
+.cancel-btn {
+  background: var(--border);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.confirm-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
